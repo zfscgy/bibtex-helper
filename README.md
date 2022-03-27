@@ -1,6 +1,7 @@
 # Bibtex Helper for VSCODE
 
 A simple management toll for bibtex files.
+Source code: https://github.com/zfscgy/bibtex-helper
 
 ## Features
 The extension displays a Bib Item Tree on the left.
@@ -14,4 +15,5 @@ The extension displays a Bib Item Tree on the left.
     ![bibtree-select](resources/example-bibs/bib_item_tree-select.PNG)
 
 
-
+## Release Notes
+### 0.0.1
