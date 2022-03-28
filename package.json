@@ -2,7 +2,7 @@
 	"name": "bibtex-helper",
 	"displayName": "Bibtex Helper",
 	"description": "A simple tool for bibtex files that displays a treeview of bib entries, including classfication via markdown-headers, navigation to the bib entry",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"repository": "github.com/zfscgy/bibtex-helper",
 	"publisher": "zfscgy",
 	"engines": {
@@ -17,10 +17,12 @@
 	"main": "./out/extension.js",
 	"contributes": {
 		"views": {
-			"explorer": [{
-			"id": "bibItemTree",
-			"name": "Bib Item Tree"
-			}]
+			"explorer": [
+				{
+					"id": "bibItemTree",
+					"name": "Bib Item Tree"
+				}
+			]
 		},
 		"commands": [
 			{
@@ -29,7 +31,7 @@
 				"icon": {
 					"light": "resources/light/refresh.png",
 					"dark": "resources/dark/refresh.png"
-					}
+				}
 			},
 			{
 				"command": "bibItemTree.navigateTo",
