@@ -106,11 +106,6 @@ export class BibNodeProvider implements vscode.TreeDataProvider<BibItem> {
         let text: string = vscode.window.activeTextEditor?.document.getText() || "";
         let lines = text.split("\n");
         if (line_offset == lines.length) return [];
-        if (line_offset != 0) {
-            if (lines[line_offset].startsWith("#")) {
-                level = count_leading_char(lines[line_offset], "#");
-            }
-        }
         let next_level_head = "#".repeat(level + 1);
         let bibItems = [];
         let i = line_offset;
@@ -136,6 +131,8 @@ export class BibNodeProvider implements vscode.TreeDataProvider<BibItem> {
             else if (line.startsWith("@")) {
                 let matches = line.match(/{.*,/g);
                 if (matches == null) {
+                    i += 1;
+                    if (i == lines.length) break;
                     continue;
                 }
                 let label = matches[0];
@@ -154,7 +151,7 @@ export class BibNodeProvider implements vscode.TreeDataProvider<BibItem> {
                 }
                 let bib_end_line = i;
                 let total_bibtext = lines.slice(bib_start_line, bib_end_line).join("");
-                let title_matches = total_bibtext.match(/ title[\t\s]*=[\t\s]*{*.*}/gs);
+                let title_matches = total_bibtext.match(/(?!book)title[\t\s]*=[\t\s]*{*.*}/gs);
                 let title = "";
                 if (title_matches != null) {
                     title = title_matches[0];
