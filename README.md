@@ -16,5 +16,5 @@ The extension displays a Bib Item Tree on the left.
 
 
 ## Release Notes
-### 0.0.1
+### 0.0.2
 Bug fix for nested headers/title extraction
