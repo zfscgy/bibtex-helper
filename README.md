@@ -1,6 +1,6 @@
 # Bibtex Helper for VSCODE
 
-A simple management toll for bibtex files.
+A simple management tool for BibTex files.
 Source code: https://github.com/zfscgy/bibtex-helper
 
 ## Features

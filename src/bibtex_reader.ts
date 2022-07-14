@@ -117,7 +117,7 @@ export class BibNodeProvider implements vscode.TreeDataProvider<BibItem> {
                 let actual_level = count_leading_char(line, "#");
                 let line_start = i;
                 let header = line.substring(count_leading_char(line, "#")).trim();
-                line = "";  // Insert a virtual line for convinience
+                line = "";  // Insert a virtual line for convenience
                 // end with #= or find a equal or higher level label, then stop
                 while (!line.startsWith("#") || (line.startsWith("#") && count_leading_char(line, "#") > actual_level)) {
                     i += 1
@@ -125,7 +125,7 @@ export class BibNodeProvider implements vscode.TreeDataProvider<BibItem> {
                     line = lines[i]
                 }
                 bibItems.push(new BibItem(
-                    header, "header", actual_level, line_start, i, vscode.TreeItemCollapsibleState.Expanded
+                    header, "", actual_level, line_start, i, vscode.TreeItemCollapsibleState.Expanded
                 ));
             }
             else if (line.startsWith("@")) {
