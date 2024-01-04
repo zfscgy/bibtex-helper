@@ -2,9 +2,10 @@
 	"name": "bibtex-helper",
 	"displayName": "Bibtex Helper",
 	"description": "A simple tool for bibtex files that displays a treeview of bib entries, including classfication via markdown-headers, navigation to the bib entry",
-	"version": "0.0.3",
+	"version": "0.0.5",
 	"repository": "github.com/zfscgy/bibtex-helper",
 	"publisher": "zfscgy",
+	"icon": "resources/icon.png",
 	"engines": {
 		"vscode": "^1.65.0"
 	},
